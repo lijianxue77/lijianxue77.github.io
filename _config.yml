@@ -5,7 +5,7 @@ baseurl:             ''
 theme-base:          theme-base-07
 
 #set your personal images here
-head-portrait: /public/background.jpg
+head-portrait: /public/icon.jpg?s=320
 shortcut-icon: /public/icon.jpg?s=32
 background-image: /public/background.jpg
 background-image-mobile: /public/background-mobile.jpg
