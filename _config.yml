@@ -8,6 +8,7 @@ theme-base:          theme-base-07
 head-portrait: /public/background.jpg
 shortcut-icon: /public/icon.jpg?s=32
 background-image: /public/background.jpg
+background-image-mobile: /public/background-mobile.jpg
 apple-touch-icon-precomposed: /public/icon.jpg?s=320
 
 collections:
