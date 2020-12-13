@@ -1,0 +1,20 @@
+title:               li-jx
+tagline:             'Home Page'
+url:                 https://lijianxue77.github.io/
+baseurl:             ''
+theme-base:          theme-base-07
+
+#set your personal images here
+head-portrait: /public/background.jpg
+shortcut-icon: /public/icon.jpg?s=32
+background-image: /public/background.jpg
+apple-touch-icon-precomposed: /public/icon.jpg?s=320
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+permalink: /posts/:title/
+readme_index:
+  with_frontmatter: true

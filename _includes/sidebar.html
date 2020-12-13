@@ -1,0 +1,39 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+
+  <div class="sidebar-item">
+    <img src="{{ site.head-portrait }}" alt="img">
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item{% if page.title == 'Home' %} active{% endif %}" href="{{ '/' | absolute_url }}">Home</a>
+
+    {% assign pages_list = site.tabs | sort:"url" %}
+    {% for node in pages_list %}
+      {% if node.title != null %}
+        {% if node.layout == "page" %}
+          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}"> {{ node.title }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </nav>
+
+  <div class="sidebar-item">
+    Contact Me: <br>
+    <a href="" class="contact-icon">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="" class="contact-icon">
+      <i class="fab fa-zhihu"></i>
+    </a>
+    <a href="" class="contact-icon">
+      <i class="fab fa-qq"></i>
+    </a>
+  </div>
+
+
+</div>
