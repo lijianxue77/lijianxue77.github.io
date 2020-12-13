@@ -13,13 +13,29 @@
   <style>
     /* set background image*/
     .wrap {
+      transition-property: width,background-size,transform;
+      transition-duration: .3s;
+      transition-timing-function: ease-in-out;
       min-height: 100%;
       display: inline-block;
       background-size: 100% auto;
       background-position: 0% 0%;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-image: url("{{ site.background-image }}");
+      background-image: url(site.background-image);
+    }
+    @media (min-aspect-ratio: 2400/1850) {
+      .wrap {
+        background-image: url(site.background-image);
+      }
+    }
+    .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+      width: calc(100% - 14rem);
+      background-size: calc(100% - 14rem) auto;
+      transform: translateX(14rem);
+    }
+    .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+      transform: translateX(0);
     }
 
     /* set color of the selected words */
