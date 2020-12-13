@@ -7,7 +7,7 @@ theme-base:          theme-base-07
 #set your personal images here
 head-portrait: /public/icon.jpg?s=320
 shortcut-icon: /public/icon.jpg?s=32
-background-image: /public/background.jpg
+background-image: /public/background.png
 background-image-mobile: /public/background-mobile.jpg
 apple-touch-icon-precomposed: /public/icon.jpg?s=320
 
