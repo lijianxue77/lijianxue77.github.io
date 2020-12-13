@@ -22,11 +22,11 @@
       background-position: 0% 0%;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-image: url("{{ site.background-image }}");
+      background-image: url("{{ site.background-image-mobile }}");
     }
-    @media (min-aspect-ratio: 2400/1850) {
+    @media (min-aspect-ratio: 2399/1850) {
       .wrap {
-        background-image: url("{{ site.background-image-mobile }}");
+        background-image: url("{{ site.background-image }}");
       }
     }
     .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
