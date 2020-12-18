@@ -4,12 +4,23 @@ url:                 https://lijianxue77.github.io/
 baseurl:             ''
 theme-base:          theme-base-07
 
-#set your personal images here
-head-portrait: /public/icon.jpg?s=320
-shortcut-icon: /public/icon.jpg?s=32
-background-image: /public/background.png
-background-image-mobile: /public/background-mobile.jpg
-apple-touch-icon-precomposed: /public/icon.jpg?s=320
+# et your personal images here
+head-portrait: /assets/icon.jpg
+shortcut-icon: /assets/icon.jpg
+background-image: /assets/background.png
+background-image-mobile: /assets/background-mobile.jpg
+apple-touch-icon-precomposed: /assets/icon.jpg
+
+# set nav links
+nav:
+  - title: 'Home'
+    href: /
+  - title: 'About'
+    href: /about/
+  - title: 'Archive'
+    href: /archives/
+  - title: 'Tags'
+    href: /tags/
 
 collections:
   tabs:

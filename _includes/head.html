@@ -1,68 +1,30 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <link rel="stylesheet" href="{{ '/public/css/poole.css' | absolute_url }}">
-  <link rel="stylesheet" href="{{ '/public/css/syntax.css' | absolute_url }}">
-  <link rel="stylesheet" href="{{ '/public/css/lanyon.css' | absolute_url }}">
-  <link rel="alternate" href="/feed.xml" title="RSS" type="application/rss+xml"/>
+  <link rel="stylesheet" href="{{ '/assets/css/lanyon/poole.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/lanyon/syntax.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/lanyon/lanyon.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/fontawesome-free/css/all.min.css' | relative_url }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.apple-touch-icon-precomposed }}">
   <link rel="shortcut icon" href="{{ site.shortcut-icon }}">
-
-
+  <link rel="alternate" href="/feed.xml" title="RSS" type="application/rss+xml"/>
   <style>
-    /* set background image*/
-    .wrap {
-      transition-property: width,background-size,transform;
-      transition-duration: .3s;
-      transition-timing-function: ease-in-out;
-      min-height: 100%;
-      display: inline-block;
-      background-size: 100% auto;
-      background-position: 0% 0%;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-image: url("{{ site.background-image-mobile }}");
+    html{
+      font-size: 32px;
     }
-    @media (min-aspect-ratio: 2399/1850) {
-      .wrap {
-        background-image: url("{{ site.background-image }}");
-      }
+    .sidebar{
+      font-size: 24px;
     }
-    .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-      width: calc(100% - 14rem);
-      background-size: calc(100% - 14rem) auto;
-      transform: translateX(14rem);
-    }
-    .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
-      transform: translateX(0);
-    }
-
-    /* set color of the selected words */
-    ::selection {
-      color: White;
-      background: Black;
-    }
-
-    /* set family and size of font*/
-    .sidebar, html{
-      font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 20px;
-    }
-
-    .contact-icon{
-      font-size: 30px;
-      padding-right: 0.8rem;
-    }
-
-    /* set opacity of content*/
-    .masthead,
-    .container.content {
+    .masthead {
       padding-top: 1rem;
       padding-bottom: 1rem;
       margin-bottom: 1rem;
-      background-color: rgba(255,255,255,0.85);
+      background-color: rgba(255,255,255,0.8);
     }
-
+    .container.content{
+      background-color: rgba(255,255,255,0.8);
+    }
     .container {
       min-width: 80%;
     }
@@ -73,12 +35,26 @@
     .sidebar-toggle {
       position: fixed;
     }
-  </style>
 
-  <script
-    async="async"
-    src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/all.min.js"
-  ></script>
+    .wrap {
+      min-height: 100%;
+      display: inline-block;
+      background-size: 100% auto;
+      background-position: 0% 0%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-image: url("{{ site.background-image-mobile }}");
+    }
+    @media (min-aspect-ratio: 3200/1600) {
+      .wrap {
+        background-image: url("{{ site.background-image }}");
+      }
+    }
+    .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+      transform: translateX(0);
+    }
+
+  </style>
 
   <title>
     {% if page.title == "Home" %}
